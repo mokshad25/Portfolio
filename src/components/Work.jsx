@@ -58,31 +58,7 @@ const PROJECTS = [
     github: null,
     figma: '#',   // ← replace with your actual Figma share URL
   },
-   {
-    title: 'Figma / Design Work',
-    description:
-      'Replace this card with your Figma project. Set the `figma` URL in the PROJECTS array above and it will show a "View in Figma" button automatically.',
-    tags: ['Figma', 'UI/UX', 'Prototyping'],
-    live: null,
-    github: null,
-    figma: '#',   // ← replace with your actual Figma share URL
-  }, {
-    title: 'Figma / Design Work',
-    description:
-      'Replace this card with your Figma project. Set the `figma` URL in the PROJECTS array above and it will show a "View in Figma" button automatically.',
-    tags: ['Figma', 'UI/UX', 'Prototyping'],
-    live: null,
-    github: null,
-    figma: '#',   // ← replace with your actual Figma share URL
-  }, {
-    title: 'Figma / Design Work',
-    description:
-      'Replace this card with your Figma project. Set the `figma` URL in the PROJECTS array above and it will show a "View in Figma" button automatically.',
-    tags: ['Figma', 'UI/UX', 'Prototyping'],
-    live: null,
-    github: null,
-    figma: '#',   // ← replace with your actual Figma share URL
-  },
+  
 ]
 
 const containerVariants = {

@@ -61,7 +61,7 @@ export default function About() {
             {[
               { label: 'Focus',    value: 'Cybersecurity' },
               { label: 'Status',   value: 'Open to Internships' },
-              { label: 'Based in', value: '[ Your City ]' },
+              { label: 'Based in', value: 'mumbai - bangalore' },
               { label: 'Degree',   value: 'B.Tech / B.S. CS' },
             ].map(({ label, value }) => (
               <div key={label}>
