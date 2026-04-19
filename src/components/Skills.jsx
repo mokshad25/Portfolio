@@ -35,6 +35,8 @@ const SKILL_CATEGORIES = [
       'supabase',
       'vercel',
       'version control with Google Collab',
+      'OPENCV',
+      'MediaPipe',
     ],
   },
   {
@@ -45,6 +47,8 @@ const SKILL_CATEGORIES = [
       'Node.js',
       'Git/GitHub',
       'Linux',
+      'Flask',
+      'FastAPI',
     ],
   },
   {

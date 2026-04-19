@@ -3,8 +3,24 @@ import { useTheme } from '../context/ThemeContext'
 import DistortedGridBackground from './DistortedGridBackground'
 import Ticker from './Ticker'
 
+// ─────────────────────────────────────────────────────────────────────────────
+//  THEME TOGGLE — configuration
+// ─────────────────────────────────────────────────────────────────────────────
+//
+//  HOW TO ADJUST VERTICAL POSITION (relative to the name heading):
+//    The toggle sits in the normal flow between the "Portfolio — 2025" label
+//    and the h1. To move it further from the name, increase mb-* on the
+//    toggle wrapper below. To move it closer, decrease mb-*.
+//    Current: mb-8  (32px gap below toggle, above name)
+//
+//  HOW TO HIDE THE HERO TOGGLE:
+//    Set SHOW_HERO_TOGGLE to false. The navbar toggle (top-right) still works.
+//
+// ─────────────────────────────────────────────────────────────────────────────
+const SHOW_HERO_TOGGLE = true
+
 export default function Hero() {
-  const { bg } = useTheme()
+  const { isRed, toggle, bg } = useTheme()
 
   return (
     <section id="hero" className={`relative flex flex-col h-screen ${bg}`}>
@@ -22,6 +38,7 @@ export default function Hero() {
       {/* ── Hero text ── */}
       <div className="relative z-10 flex-1 flex flex-col items-center justify-center px-4 text-center">
 
+        {/* "Portfolio — 2025" label */}
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -31,6 +48,67 @@ export default function Hero() {
           Portfolio — 2025
         </motion.p>
 
+        {/* ── Theme toggle pill ─────────────────────────────────────────────
+            Centered above the main heading.
+
+            LIGHT mode (isRed=false):
+              Pill → thin border, near-transparent fill, knob on LEFT (black)
+            DARK / RED mode (isRed=true):
+              Pill → filled black, knob on RIGHT (red)
+
+            HOW TO REPOSITION:
+              Adjust `mb-8` below to change spacing above the h1.
+              The toggle inherits the parent's `items-center` so it stays
+              horizontally centred at all viewport widths automatically.
+
+            HOW TO DISABLE: set SHOW_HERO_TOGGLE = false at the top of this file.
+        ─────────────────────────────────────────────────────────────────── */}
+        {SHOW_HERO_TOGGLE && (
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-8"
+          >
+            {/*
+              Pill toggle — state at a glance:
+                Light mode → gray track  (#d1d5db), knob LEFT,  knob = white
+                Dark  mode → black track (#000000), knob RIGHT, knob = white
+              Knob is always white so it has maximum contrast on both track colors.
+              No text labels — the knob position communicates the state clearly.
+
+              HOW TO REPOSITION: adjust `mb-8` on the parent div above.
+              HOW TO RESIZE:     change w-14/h-7 (track) and w-5/h-5 (knob) together.
+                                 If you change track width, recalculate translate-x-7:
+                                 right offset = trackW - knobW - leftPad*2
+                                 e.g. w-14(56px) - w-5(20px) - 1(4px) - 1(4px) = 28px = 7 * 4px
+            */}
+            <button
+              onClick={toggle}
+              aria-label={`Switch to ${isRed ? 'light' : 'dark'} mode`}
+              className={`
+                relative w-14 h-7 rounded-full
+                transition-colors duration-300
+                focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/40
+                ${isRed ? 'bg-black' : 'bg-gray-300'}
+              `}
+            >
+              {/* Sliding knob — always white for contrast on both track colors */}
+              <span
+                aria-hidden="true"
+                className={`
+                  absolute top-1 left-1
+                  w-5 h-5 rounded-full bg-white
+                  shadow-sm
+                  transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)]
+                  ${isRed ? 'translate-x-7' : 'translate-x-0'}
+                `}
+              />
+            </button>
+          </motion.div>
+        )}
+
+        {/* Name heading — unchanged */}
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}

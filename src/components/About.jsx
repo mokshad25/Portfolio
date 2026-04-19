@@ -50,7 +50,14 @@ export default function About() {
           </p>
 
           <p className="font-body text-base md:text-lg leading-relaxed text-black/75">
-          I’m obsessed with the architecture of things, understanding how systems work, where they break, and how they can be made bulletproof. I am a problem solver at heart and my focus is on building practical, AI-driven solutions that bridge the gap between human and technology. I don't just write code; I build with a startup-first mindset. I thrive in fast-paced, unstructured environments where I can take an idea from a problem statement to a pitch-ready MVP. I'm a builder at heart, driven by the challenge of creating a venture that delivers genuine social impact through scalable technology.
+I’m deeply curious about how systems are built, where they fail, and how they can be made secure and reliable. I enjoy breaking things down to understand them, and then rebuilding them better.
+
+Alongside security, I have a strong interest in UI/UX design. I believe technology should not only be functional but also intuitive and engaging, and I enjoy crafting interfaces that make complex ideas feel simple.
+
+I approach projects with a builder’s mindset — I like taking ideas from a problem statement to a working MVP. I’m especially interested in startup environments where speed, ownership, and real-world impact matter more than perfect plans.
+
+My focus is on creating practical, AI-driven solutions that solve meaningful problems, with the long-term goal of building products that are scalable, impactful, and grounded in strong engineering and thoughtful design.
+
           </p>
 
           {/* ── Metadata grid ────────────────────────────────────────────────

@@ -29,6 +29,15 @@ import Ticker from './Ticker'
    ─────────────────────────────────────────────────────────────────────────── */
 const PROJECTS = [
   {
+    title: 'AI Detector',
+    description:
+      'Developed a production-ready AI-generated text detection platform using a hybrid approach combining TF-IDF/statistical features and transformer models (BERT). Implemented stylometric analysis (burstiness, sentence variation) and probabilistic scoring instead of binary classification, with a FastAPI backend and deployed frontend for real-time inference.',
+    tech: 'Python, Transformers (BERT / DistilBERT), NumPy / Pandas,FastAPI / Flask, React, ',
+    link: null,
+    github: 'https://ai-idetector.vercel.app/',
+    figma: null,
+  },
+  {
     title: 'Driver mirror AI',
     description:
       'Built a real-time driver monitoring system using Python, OpenCV and MediaPipe that detects drowsiness, yawning and distraction at 30fps through Eye Aspect Ratio, Mouth Aspect Ratio and head pose estimation via solvePnP, processes video at 30fps with <33ms latency.',
@@ -47,41 +56,32 @@ const PROJECTS = [
     figma: null,
   },
   {
-    title: 'AI Detector',
+    title: 'AI study planner',
     description:
-      'Set te `figma` field below to your Figma share URL and this card will link directly to it.',
-    tech: 'Figma, UI/UX, Prototyping',
+      'A full-stack AI-powered study planning application built using FastAPI (Python). The system generates personalized study schedules based on user inputs such as goals, subjects, and deadlines. The backend follows a modular architecture with RESTful APIs, schema validation, and database integration.',
+    tech: 'FastAPI, Python, Uvicorn, React (Vite), Tailwind CSS',
     link: null,
-    github: 'https://github.com/mokshad25/AIdetector',
+    github: 'https://github.com/mokshad25/AIstudyplanner',
     figma: null,
   },
   {
-    title: 'AI study planner',
+    title: 'Securecorp Dashboard',
     description:
-      'Set the `figma` field below to your Figma share URL and this card will link directly to it.',
-    tech: 'Figma, UI/UX, Prototyping',
+      'Developed a full-stack secure document management system using MySQL, Node.js/Express, and a responsive frontend UI. The system implements role-based access control (RBAC) with document classification levels (Public, Internal, Confidential, Top Secret). Key features include password hashing, login tracking, access logs, and security alerts.',
+    tech: 'React, Node.js, Express, MySQL',
     link: null,
-    github: 'https://github.com/mokshad25/my-first-project',
+    github: 'https://github.com/mokshad25/Securecorp-dashboard',
     figma: null,
   },
   {
     title: 'Club Blog App',
     description:
       'A full-stack blog application for a college club, featuring role-based access (admin/member), post management, and a modern, responsive interface.',
-    tech: 'Figma, UI/UX, Prototyping',
+    tech: 'Next.js, CSS Modules, MongoDB',
     link: null,
     github: 'https://club-blog-app.vercel.app/',
     figma: null,
-  },
-  {
-    title: 'System Health Check',
-    description:
-      '.',
-    tech: 'Figma, UI/UX, Prototyping',
-    link: null,
-    github: 'https://github.com/mokshad25/system-health-check',
-    figma: null,
-  },
+  }
 ]
 
 // ─────────────────────────────────────────────────────────────────────────────
