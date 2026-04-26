@@ -38,6 +38,15 @@ const PROJECTS = [
     figma: null,
   },
   {
+    title: 'FocusLens',
+    description:
+    'FocusLens is a local-first productivity intelligence platform that analyzes a user’s browser activity patterns to help them understand how they spend time online, identify distractions, and improve focus,The system extracts browser history data, classifies browsing behavior into productive/distraction categories, applies machine learning models to detect behavioral patterns, and visualizes insights through an interactive dashboard.',
+    tech: 'Python, Pandas, URL parsing, Scikit-learn, SQLite, Streamlit',
+    link: 'https://focuslens-lp6gn7uwmqzjdlltxaetrf.streamlit.app/',
+    github: null,
+    figma: null,
+  },
+  {
     title: 'Driver mirror AI',
     description:
       'Built a real-time driver monitoring system using Python, OpenCV and MediaPipe that detects drowsiness, yawning and distraction at 30fps through Eye Aspect Ratio, Mouth Aspect Ratio and head pose estimation via solvePnP, processes video at 30fps with <33ms latency.',
